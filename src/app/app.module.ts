@@ -1,7 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//Rutas
+//import { AppRoutingModule } from './app-routing.module';
+import { APP_ROUTING } from './app.routes';
 
-import { AppRoutingModule } from './app-routing.module';
+//Servicios
+
+//Componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -18,7 +23,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    //AppRoutingModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
