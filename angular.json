@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularSpa"
+    }
+  },
+  "defaultProject": "AngularSpa",
+  "cli": {
+    "analytics": false
+  }
 }
