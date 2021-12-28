@@ -71,4 +71,22 @@ export class HeroesService {
   getHeroe(idx:number) {
     return this.heroes[idx];
   }
+
+  //Metodo para buscar un heroe
+  buscarHeroes(termino: string): IHeroe[] {
+    let heroesArr: IHeroe[] = [];
+    //Pasamos el valor a minuscula
+    termino = termino.toLowerCase();
+    //Recorremos la lista de heroes
+    for (let heroe of this.heroes) {
+      let nombre = heroe.nombre.toLowerCase();
+      //Si el heroe esta en la lista
+      if (nombre.indexOf(termino) >= 0) {
+        //Agregamos el heroe al array
+        heroesArr.push(heroe);
+      }
+    }
+    return heroesArr;
+
+  }
 }
