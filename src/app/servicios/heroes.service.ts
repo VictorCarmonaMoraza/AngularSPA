@@ -66,4 +66,9 @@ export class HeroesService {
   getHeroes():IHeroe[] {
     return this.heroes;
   }
+
+  //Devuelve un heroe
+  getHeroe(idx:number) {
+    return this.heroes[idx];
+  }
 }
