@@ -3,7 +3,7 @@
 
   <div class="card-columns">
     <!--hacemos un ngFor para duplicar las tarjetas-->
-    <div class="card" *ngFor="let heroe of heroes">
+    <div class="card" *ngFor="let heroe of heroes; let i = index">
       <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
       <div class="card-block">
         <h4 class="card-title">{{heroe.nombre}}</h4>
@@ -11,9 +11,11 @@
         <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
 
         <!--boton de la card-->
-        <button type="button" class="btn btn-outline-primary btn-block">
+        <button  (click)="verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">
           Ver mas...
         </button>
+        <!--Otra forma de boton-->
+        <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver mas link...</a> -->
 
       </div>
     </div>
