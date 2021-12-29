@@ -33,7 +33,9 @@
 
   <app-heroe-tarjeta
     [heroe]="heroeABuscar"
-    [indice]="indiceaBuscar"
-    *ngFor="let heroeABuscar of heroes; let indiceaBuscar = index"
+    [indice]="heroeABuscar.idx"
+    *ngFor="let heroeABuscar of heroes;">
+    <!--[indice]="indiceaBuscar"-->
+    <!-- *ngFor="let heroeABuscar of heroes; let indiceaBuscar = index"> -->
   ></app-heroe-tarjeta>
 </div>

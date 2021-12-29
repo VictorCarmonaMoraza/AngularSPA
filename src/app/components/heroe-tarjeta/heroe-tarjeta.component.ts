@@ -26,9 +26,9 @@ export class HeroeTarjetaComponent implements OnInit {
   verHeroe() {
     // console.log(idx);
     //Redireccionamos
-    // this._router.navigate(['/heroe', this.indice]);
+     this._router.navigate(['/heroe', this.indice]);
     // console.log(this.indice);
-    this.heroeSeleccionado.emit(this.indice);
+    //this.heroeSeleccionado.emit(this.indice);
   }
 
 }

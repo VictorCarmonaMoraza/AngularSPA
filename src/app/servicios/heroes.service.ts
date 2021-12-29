@@ -78,14 +78,26 @@ export class HeroesService {
     //Pasamos el valor a minuscula
     termino = termino.toLowerCase();
     //Recorremos la lista de heroes
-    for (let heroe of this.heroes) {
+    // for (let heroe of this.heroes) {
+    //   let nombre = heroe.nombre.toLowerCase();
+    //   Si el heroe esta en la lista
+    //   if (nombre.indexOf(termino) >= 0) {
+    //     Agregamos el heroe al array
+    //     heroesArr.push(heroe);
+    //   }
+    // }
+    for (let i = 0; i < this.heroes.length; i++){
+
+      let heroe = this.heroes[i];
+
       let nombre = heroe.nombre.toLowerCase();
-      //Si el heroe esta en la lista
+
       if (nombre.indexOf(termino) >= 0) {
-        //Agregamos el heroe al array
+        heroe.idx = i;
         heroesArr.push(heroe);
       }
     }
+
     return heroesArr;
 
   }
