@@ -4,6 +4,6 @@
   <div class="card-columns">
     <!--hacemos un ngFor para duplicar las tarjetas-->
     <!--*ngFor="let heroe of heroes; let i = index"-->
-   <app-heroe-tarjeta [heroe]="heroeArray" [indice]="i" *ngFor="let heroeArray of heroes; let i = index"></app-heroe-tarjeta>
+   <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="heroeArray" [indice]="i" *ngFor="let heroeArray of heroes; let i = index"></app-heroe-tarjeta>
 
   </div>
